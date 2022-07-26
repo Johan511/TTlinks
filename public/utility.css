@@ -1,0 +1,27 @@
+.bg-green {
+    background-color: hsl( var(--color-green));
+}
+
+.bg-white {
+    background-color: hsl( var(--color-white) / var(--bg-white-opacity, 1));
+}
+
+.bg-light {
+    background-color: hsl( var(--color-light) / var(--bg-light-opacity, 1));
+}
+
+.bg-dark {
+    background-color: hsl( var(--color-dark) / var(--bg-dark-opacity, 1));
+}
+
+.bg-peach {
+    background-color: hsl( var(--color-peach) / var(--bg-peach-opacity, 1));
+}
+
+.bg-baby-blue {
+    background-color: hsl( var(--color-baby-blue) / var(--bg-baby-blue-opacity, 1));
+}
+
+.bg-mountain-blue {
+    background-color: hsl( var(--color-mountain-blue) / var(--bg-mountain-blue-opacity, 1));
+}

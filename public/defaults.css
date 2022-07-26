@@ -1,0 +1,204 @@
+:root {
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    --fs-100: 0.6rem;
+    --color-dark: 236 17% 16%;
+    --color-light: 231 77% 90%;
+    --color-green: 129 33% 77%;
+    --color-dark-green: 95 45% 50%;
+    --color-white: 267 36% 95%;
+    --color-peach: 39.2 100% 82%;
+    --color-baby-blue: 199.2 77.4% 73.9%;
+    --color-mountain-blue: 209 56% 44%;
+    --ff-serif: 'Bellefair', serif;
+    --ff-sans-cond: 'Barlow Condensed', sans-serif;
+    --ff-sans-normal: 'Barlow', sans-serif;
+    --ff-helvetica: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: min(max(1.5vw, 14px), 18px)
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+picture,
+figure {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.7rem;
+    font-weight: bolder;
+}
+
+h2 {
+    font-weight: 540;
+    font-size: 1.8rem;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: hsl( var(--color-dark) / 1);
+}
+
+body {
+    background-color: hsl( var(--color-dark));
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-helvetica);
+    font-weight: 1;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    padding-left: 0;
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.ff-helvetica {
+    font-family: var(--ff-helvetica);
+}
+
+.ff-serif {
+    font-family: var(--ff-serif);
+}
+
+.ff-sans-cond {
+    font-family: var(--ff-sans-cond);
+}
+
+.ff-sans-normal {
+    font-family: var(--ff-sans-normal);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+.letter-spacing-0 {
+    letter-spacing: 0;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.3rem;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.17rem;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 0.13rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.flex-col>*,
+.flex-row>* {
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-grow-0 > *{
+    flex-grow: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--row-gap, 1rem);
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--col-gap, 1rem);
+}
+
+

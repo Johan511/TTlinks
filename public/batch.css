@@ -1,0 +1,134 @@
+#tt {
+    text-align: center;
+    margin-top: 0px;
+    --row-gap: 0.4rem;
+    --col-gap: 0.9rem;
+    min-width: fit-content;
+    margin-right: max(1%);
+    margin-left: max(1%);
+    padding: 1.3rem min(1rem, 3%) 1.3rem min(1rem, 3%);
+}
+
+.border {
+    border: 1.5px solid;
+    border-color: var(--border-color, hsl(--color-dark) / 1);
+    border-radius: var(--border-radius, 0.5rem);
+}
+
+#hour {
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+    margin-left: 10%;
+}
+
+.lecture:hover {
+    cursor: context-menu;
+    transform: scale(1.1);
+    border-width: 0.13rem;
+    background-color: hsl(var(--color-light) / 1);
+}
+
+a.lecture[aria-selected="true"] {
+    /* higher preference to hover due to more selectors a , class and aria */
+    font-weight: lighter;
+    transform: scale(1.13);
+    border-width: 0.1rem;
+    background-color: hsl(var(--color-peach) / 1);
+    z-index: 1;
+}
+
+section {
+    padding: 2rem 1rem 0 2rem
+}
+
+#announcements,
+#messages {
+    padding: 0.5rem 2rem 0 1rem;
+    color: hsl(var(--color-white) / 1);
+}
+
+.stamp {
+    margin: 2px 0 2px 0;
+    gap: 0;
+    align-self: center;
+}
+
+.message {
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    margin-bottom: 1.5rem;
+    border-width: 0.3rem;
+    border-color: hsl(var(--color-dark));
+    box-shadow: 0.7px 0.7px 6px 3px hsl(var(--color-light) / 0.5);
+
+}
+
+.message>p {
+    /* content */
+    border-color: hsl(var(--color-light) / 0.5);
+    letter-spacing: 0;
+    margin-top: 0.2rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+}
+
+
+h1 {
+    color: hsl(var(--color-light) / 1);
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    html #add-icon{
+        margin-top: 0px;  /* using only id selector does not help due to specificity issues*/
+    }
+
+    #messages *, #announcements * {
+        overflow: wrap;
+    }
+        
+    
+    #messages > div.message > div,
+    #announcements > div.message > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem ;  /*changing  --col-gap variable does not help */
+
+    }
+}
+
+input{
+    padding-left: 0.7rem;
+    opacity: 0.7;
+}
+
+#add-icon{
+    margin-top: -20px;
+    height: 15px;
+    aspect-ratio: 1;
+}
+
+
+.h1-container{
+    padding-right: max(4.5%, 2rem);
+    
+    --col-gap: 0      
+}
+
+.h1-container > *{
+    flex-grow: 0;
+}
+
+.h1-container svg{
+    margin-left: auto;
+}
+
+.filter-white{
+    filter: invert(100%);
+}
+
+.message-form{
+    overflow: auto;
+    display: none;
+}
+
